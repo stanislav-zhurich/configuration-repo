@@ -1,4 +1,4 @@
-prop1: value1_test
+prop1: value1_test_new
 server:
    port: 9001
 eureka:
