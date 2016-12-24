@@ -1,6 +1,5 @@
-prop1: value1_default
 server:
-   port: 9001
+   port: 80
 eureka:
    instance:
      status-page-url-path: /home

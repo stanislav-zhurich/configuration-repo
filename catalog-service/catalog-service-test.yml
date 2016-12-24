@@ -6,4 +6,4 @@ eureka:
      status-page-url-path: /home
      client:
         serviceUrl:
-          defaultZone: http://localhost:8761/eureka
+          defaultZone: http://192.168.33.10:8761/eureka
