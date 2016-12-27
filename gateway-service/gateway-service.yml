@@ -23,3 +23,7 @@ zuul:
     catalog-service:
       path: /products/**
       stripPrefix: false
+proxy:
+  auth:
+    routes:
+      catalog-service: oauth2
