@@ -18,3 +18,8 @@ security:
     resource:
       userInfoUri: https://api.github.com/user
       preferTokenInfo: false
+zuul:
+  routes:
+    catalog-service:
+      path: /products/**
+      stripPrefix: false
