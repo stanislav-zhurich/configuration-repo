@@ -26,4 +26,4 @@ zuul:
 proxy:
   auth:
     routes:
-      catalog-service: oauth2
+      catalog-service: passthru
