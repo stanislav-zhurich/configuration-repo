@@ -7,3 +7,7 @@ eureka:
      client:
         serviceUrl:
           defaultZone: http://192.168.33.10:8761/eureka
+security:
+  oauth2:
+    resource:
+      userInfoUri: https://api.github.com/user
