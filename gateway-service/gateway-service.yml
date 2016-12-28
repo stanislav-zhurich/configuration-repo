@@ -27,3 +27,6 @@ proxy:
   auth:
     routes:
       catalog-service: oauth2
+logging:
+  level:
+    org.springframework.security: DEBUG
