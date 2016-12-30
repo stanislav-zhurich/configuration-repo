@@ -26,3 +26,7 @@ zuul:
 logging:
    level:
     org.springframework.security: DEBUG
+proxy:
+  auth:
+    routes:
+      catalog-service: oauth2
