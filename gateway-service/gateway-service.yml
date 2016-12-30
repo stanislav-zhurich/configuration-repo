@@ -23,10 +23,3 @@ zuul:
     catalog-service:
       path: /products/**
       stripPrefix: false
-logging:
-   level:
-    org.springframework.security: DEBUG
-proxy:
-  auth:
-    routes:
-      catalog-service: passthru
