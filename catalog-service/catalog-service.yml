@@ -8,10 +8,10 @@ eureka:
         serviceUrl:
           defaultZone: http://192.168.33.10:8761/eureka
 security:
-  oauth2:
+   oauth2:
     resource:
       userInfoUri: https://api.github.com/user
 logging:
-  level:
+   level:
     org.springframework.security: DEBUG
 	

@@ -24,5 +24,5 @@ zuul:
       path: /products/**
       stripPrefix: false
 logging:
-  level:
+   level:
     org.springframework.security: DEBUG
