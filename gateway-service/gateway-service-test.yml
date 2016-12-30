@@ -18,3 +18,7 @@ security:
     resource:
       userInfoUri: https://api.github.com/user
       preferTokenInfo: false
+proxy:
+  auth:
+    routes:
+      catalog-service: oauth2
