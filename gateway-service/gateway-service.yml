@@ -30,4 +30,4 @@ security:
       scope: user
     resource:
       userInfoUri: https://api.github.com/user
-      preferTokenInfo: false
+      preferTokenInfo: true
