@@ -23,7 +23,7 @@ zuul:
   routes:
     catalog-service:
       path: /products/**
-      sensitiveHeaders:
+      sensitiveHeaders:user-agent
       stripPrefix: false
 proxy:
   auth:
