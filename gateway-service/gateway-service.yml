@@ -19,6 +19,7 @@ security:
       userInfoUri: https://api.github.com/user
       preferTokenInfo: false
 zuul:
+  ignoreSecurityHeaders: false
   routes:
     catalog-service:
       path: /products/**
