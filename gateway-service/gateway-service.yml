@@ -28,6 +28,7 @@ security:
       clientAuthenticationScheme: form
       authenticationScheme: query
       scope: user
+      auto-approve-scopes: '.*'
     resource:
       userInfoUri: https://api.github.com/user
       preferTokenInfo: true
