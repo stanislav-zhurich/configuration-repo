@@ -3,7 +3,6 @@ server:
    port: 9001
 eureka:
    instance:
-     status-page-url-path: /home
      client:
         serviceUrl:
           defaultZone: http://192.168.33.10:8761/eureka
