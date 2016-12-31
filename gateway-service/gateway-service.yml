@@ -7,6 +7,7 @@ eureka:
         serviceUrl:
           defaultZone: http://192.168.33.10:8761/eureka
 security:
+  sessions: stateless
   oauth2:
     client:
       clientId: f83afcdf1f8c4bc4f7f1
@@ -19,12 +20,13 @@ security:
       userInfoUri: https://api.github.com/user
       preferTokenInfo: false
 zuul:
-  ignoreSecurityHeaders: false
+  ignore-security-headers: false
   routes:
     catalog-service:
       path: /products/**
-      sensitiveHeaders:user-agent
       stripPrefix: false
+      sensitive-headers:
+        user-agent
 proxy:
   auth:
     routes:
