@@ -27,7 +27,8 @@ security:
       userAuthorizationUri: https://github.com/login/oauth/authorize
       clientAuthenticationScheme: form
       authenticationScheme: query
-      scope: user
+      scope: 
+       - user
     resource:
       userInfoUri: https://api.github.com/user
       preferTokenInfo: false
