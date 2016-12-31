@@ -5,8 +5,6 @@ eureka:
      client:
         serviceUrl:
           defaultZone: http://192.168.33.10:8761/eureka
-    server:
-       waitTimeInMsWhenSyncEmpty: 0
 zuul:
   routes:
     catalog-service:
