@@ -2,12 +2,25 @@ server:
    port: 81
 eureka:
    instance:
-     status-page-url-path: /home
      client:
         serviceUrl:
           defaultZone: http://192.168.33.10:8761/eureka
+    server:
+       waitTimeInMsWhenSyncEmpty: 0
+zuul:
+  routes:
+    catalog-service:
+      path: /products/**
+      stripPrefix: false
+      sensitive-headers:
+proxy:
+  auth:
+    routes:
+      catalog-service: oauth2
 security:
   sessions: stateless
+  basic:
+    enabled: false
   oauth2:
     client:
       clientId: f83afcdf1f8c4bc4f7f1
@@ -19,15 +32,3 @@ security:
     resource:
       userInfoUri: https://api.github.com/user
       preferTokenInfo: false
-zuul:
-  ignore-security-headers: false
-  routes:
-    catalog-service:
-      path: /products/**
-      stripPrefix: false
-      sensitive-headers:
-        user-agent
-proxy:
-  auth:
-    routes:
-      catalog-service: passthru
