@@ -1,0 +1,26 @@
+server:
+   port: 9002
+eureka:
+   instance:
+     client:
+        serviceUrl:
+          defaultZone: http://192.168.33.10:8761/eureka
+security:
+   basic:
+    enabled: false
+   oauth2:
+     resource:
+      userInfoUri: https://api.github.com/user
+      preferTokenInfo: false
+spring:
+  elasticsearch:
+    jest:
+      uris:
+        - http://ecsc00103d58.epam.com:9200
+  data:
+    elasticsearch:
+      repositories:
+        enabled: true
+logging:
+   level:
+    org.springframework.security: DEBUG
