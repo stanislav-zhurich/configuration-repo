@@ -15,8 +15,7 @@ security:
 spring:
   elasticsearch:
     jest:
-      uris:
-        - http://ecsc00103d58.epam.com:9200
+      uris: http://ecsc00103d58.epam.com:9200
   data:
     elasticsearch:
       repositories:
