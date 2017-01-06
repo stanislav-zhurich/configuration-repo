@@ -24,7 +24,7 @@ security:
       clientId: clientapp
       clientSecret: 123456
       accessTokenUri: http://localhost:9003/oauth/token
-      userAuthorizationUri: http://localhost:9003/oauth/authorize
+      userAuthorizationUri: /oauth/authorize
       clientAuthenticationScheme: form
       authenticationScheme: query
       scope: user
