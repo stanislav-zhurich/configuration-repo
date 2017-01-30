@@ -1,24 +1,34 @@
 server:
-   port: 81
+   port: ${PORT}
 eureka:
    instance:
-     status-page-url-path: /home
      client:
         serviceUrl:
-          defaultZone: http://192.168.33.10:8761/eureka
-security:
-  oauth2:
-    client:
-      clientId: f83afcdf1f8c4bc4f7f1
-      clientSecret: 1c4446ae00fa5ee479bef1e8aad7e5b1c15f8b90
-      accessTokenUri: https://github.com/login/oauth/access_token
-      userAuthorizationUri: https://github.com/login/oauth/authorize
-      clientAuthenticationScheme: form
-      authenticationScheme: query
-    resource:
-      userInfoUri: https://api.github.com/user
-      preferTokenInfo: false
+          defaultZone: ${CLOUD_CONFIG_URL}/eureka
+zuul:
+  routes:
+    catalog-service:
+      path: /products/**
+      stripPrefix: false
+      sensitive-headers:
 proxy:
   auth:
     routes:
       catalog-service: oauth2
+security:
+  sessions: stateless
+  basic:
+    enabled: false
+  oauth2:
+    client:
+      clientId: clientapp
+      clientSecret: 123456
+      accessTokenUri: http://localhost:9003/oauth/token
+      userAuthorizationUri: http://localhost:9003/oauth/authorize
+      clientAuthenticationScheme: form
+      authenticationScheme: query
+      scope: user
+      auto-approve-scopes: '.*'
+    resource:
+      userInfoUri: http://localhost:9003/oauth/check_token
+      preferTokenInfo: true
